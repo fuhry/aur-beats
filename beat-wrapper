@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Script to run BEATNAME in foreground with the same path settings that
+# the init script / systemd unit file would do.
+
+exec /usr/lib/BEATNAME/BEATNAME \
+  -path.home /usr/share/BEATNAME \
+  -path.config /etc/BEATNAME \
+  -path.data /var/lib/BEATNAME \
+  -path.logs /var/log/BEATNAME \
+  "$@"

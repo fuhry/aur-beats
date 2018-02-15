@@ -1,0 +1,12 @@
+[Unit]
+Description=BEATNAME
+Documentation=https://github.com/elastic/beats
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/lib/BEATNAME/BEATNAME -c /etc/BEATNAME/BEATNAME.yml -path.home /usr/share/BEATNAME -path.config /etc/BEATNAME -path.data /var/lib/BEATNAME -path.logs /var/log/BEATNAME
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
